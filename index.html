@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Goutham Rajesh — AI / Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Goutham Rajesh, AI / Software Engineer building agentic AI systems and enterprise Java microservices."
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload every character frame so transitions never flash. -->
+    <link rel="preload" as="image" href="assets/frames/working.jpg" />
+    <link rel="preload" as="image" href="assets/frames/look-left.jpg" />
+    <link rel="preload" as="image" href="assets/frames/look-right.jpg" />
+    <link rel="preload" as="image" href="assets/frames/excited.jpg" />
+    <link rel="preload" as="image" href="assets/frames/headset-off.jpg" />
+    <link rel="preload" as="image" href="assets/frames/wave.jpg" />
+    <link rel="preload" as="image" href="assets/frames/point.jpg" />
+
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="nav__brand" href="#top" aria-label="Goutham Rajesh, home">
+        <span class="nav__mark" aria-hidden="true"></span>
+        <span class="nav__name">Goutham Rajesh</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="hero" aria-label="Introduction">
+        <!-- Backdrop layers: cool steel edges, white glow behind the character. -->
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="hero__glow" aria-hidden="true"></div>
+
+        <!-- Left-side note -->
+        <aside class="hero__note">
+          <p class="note__eyebrow">Hello,</p>
+          <h1 class="note__title">
+            I'm <em>Goutham Rajesh</em><br />
+            <span class="note__role">AI / Software Engineer</span>
+          </h1>
+          <p class="note__hint">
+            <span class="hint__cursor" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                <path
+                  d="M5 3l14 8.5-6.2 1.6L9.5 20 5 3z"
+                  fill="currentColor"
+                  stroke="#fff"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="hint__text">Move cursor to call me !</span>
+            <span class="hint__tap">Tap him to say hello</span>
+          </p>
+        </aside>
+
+        <!-- Character stage -->
+        <div class="hero__stage" id="stage">
+          <p class="stage__message" id="message" aria-live="polite"></p>
+
+          <div class="character" id="character" role="img" aria-label="Animated character working on a laptop">
+            <img class="frame is-active" data-frame="working" src="assets/frames/working.jpg" alt="" decoding="async" fetchpriority="high" />
+            <img class="frame" data-frame="look-left" src="assets/frames/look-left.jpg" alt="" decoding="async" />
+            <img class="frame" data-frame="look-right" src="assets/frames/look-right.jpg" alt="" decoding="async" />
+            <img class="frame" data-frame="excited" src="assets/frames/excited.jpg" alt="" decoding="async" />
+            <img class="frame" data-frame="headset-off" src="assets/frames/headset-off.jpg" alt="" decoding="async" />
+            <img class="frame" data-frame="wave" src="assets/frames/wave.jpg" alt="" decoding="async" />
+            <img class="frame" data-frame="point" src="assets/frames/point.jpg" alt="" decoding="async" />
+          </div>
+        </div>
+
+        <a class="hero__scroll" href="#work" aria-label="Scroll to portfolio">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ================= WORK ================= -->
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="container">
+          <p class="section__eyebrow">Selected work</p>
+          <h2 class="section__title" id="work-title">Agentic systems and resilient backends</h2>
+          <p class="section__lead">
+            Projects from UST Global and personal research, spanning LLM agent orchestration, cloud migration and
+            Java microservices.
+          </p>
+
+          <div class="cards">
+            <article class="card">
+              <p class="card__meta">UST Global · Jan 2026 – Present</p>
+              <h3 class="card__title">EHDS QA Agent</h3>
+              <p class="card__body">
+                AI-powered QA automation agent that orchestrates multi-step test-generation workflows with LangGraph.
+                Pulls user stories and Swagger/OpenAPI specs from Jira through an MCP server, retrieves context with
+                ChromaDB, and auto-generates Karate scripts and Postman collections. Cut manual test-artifact
+                handling by roughly 25% and QA scoping effort by about 30%.
+              </p>
+              <ul class="tags">
+                <li>LangGraph</li><li>LLM</li><li>Jira MCP</li><li>ChromaDB</li><li>Karate</li><li>Postman</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <p class="card__meta">Personal · Nov 2025 – Dec 2025</p>
+              <h3 class="card__title">Agentic Service Resilience Framework</h3>
+              <p class="card__body">
+                Self-healing controller that tails logs, runs HTTP and port health checks, and uses LangChain
+                tool-calling with a zero-shot ReAct agent on Gemini to interpret error patterns and restart failing
+                microservices with cooldown and safety checks. Reduced mean recovery time by roughly 35%.
+              </p>
+              <ul class="tags">
+                <li>Python</li><li>LangChain</li><li>Gemini</li><li>FastAPI</li>
+              </ul>
+              <a class="card__link" href="https://github.com/Goutham-Rajesh/Agentic-AI-demo" target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </article>
+
+            <article class="card">
+              <p class="card__meta">UST Global · Sep 2024 – Jan 2026</p>
+              <h3 class="card__title">Vulcan Microsoft Engagement</h3>
+              <p class="card__body">
+                Scalable Spring Boot backend services for healthcare applications, deployed on Azure Kubernetes
+                Service. Led the migration of critical enterprise applications from AWS to Azure with under 1%
+                downtime, replacing S3 with Azure Blob Storage and moving MongoDB to Atlas with zero data loss.
+              </p>
+              <ul class="tags">
+                <li>Java</li><li>Spring Boot</li><li>AKS</li><li>MongoDB Atlas</li><li>MySQL</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="repos">
+            <div class="repos__head">
+              <h3 class="repos__title">More on GitHub</h3>
+              <a class="text-link" href="https://github.com/Goutham-Rajesh" target="_blank" rel="noopener">
+                github.com/Goutham-Rajesh
+              </a>
+            </div>
+            <ul class="repos__list">
+              <li>
+                <a href="https://github.com/Goutham-Rajesh/MedConnect" target="_blank" rel="noopener">
+                  <span class="repo__name">MedConnect</span>
+                  <span class="repo__desc">AI-powered health platform built with Next.js</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Goutham-Rajesh/Capstone-Project" target="_blank" rel="noopener">
+                  <span class="repo__name">Capstone-Project</span>
+                  <span class="repo__desc">Final-year engineering capstone in TypeScript</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Goutham-Rajesh/SPAM_EMAIL_DETECTION" target="_blank" rel="noopener">
+                  <span class="repo__name">SPAM_EMAIL_DETECTION</span>
+                  <span class="repo__desc">Machine-learning email filtering system</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Goutham-Rajesh/Job-Portal-NodeJs-Microservice" target="_blank" rel="noopener">
+                  <span class="repo__name">Job-Portal-NodeJs-Microservice</span>
+                  <span class="repo__desc">Microservice-based job portal in Node.js</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Goutham-Rajesh/srtlinks" target="_blank" rel="noopener">
+                  <span class="repo__name">srtlinks</span>
+                  <span class="repo__desc">Share multiple links from one place</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Goutham-Rajesh/Leetcode" target="_blank" rel="noopener">
+                  <span class="repo__name">Leetcode</span>
+                  <span class="repo__desc">Coding challenge solutions in Python</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section class="section section--tint" id="about" aria-labelledby="about-title">
+        <div class="container about">
+          <div>
+            <p class="section__eyebrow">About</p>
+            <h2 class="section__title" id="about-title">Building AI agents that ship to production</h2>
+          </div>
+          <div class="about__body">
+            <p>
+              I'm an AI / Software Engineer with over two years of experience building agentic AI systems and
+              enterprise Java microservices. I work hands-on with LangChain, LangGraph and ChromaDB for agent
+              orchestration and retrieval-augmented generation, and with PyTorch and TensorFlow for model work.
+            </p>
+            <p>
+              On the platform side I have migrated production systems from AWS to Azure and deployed Spring Boot and
+              FastAPI services on Azure Kubernetes Service. Outside work I enjoy capture-the-flag competitions and
+              digital forensics, and I was a Digital Forensics Analyst with team bi0s at university.
+            </p>
+            <dl class="facts">
+              <div><dt>Based in</dt><dd>Whitefield, Bengaluru, India</dd></div>
+              <div><dt>Currently</dt><dd>Software Developer II, UST Global</dd></div>
+              <div><dt>Focus</dt><dd>Agentic AI, RAG, Java microservices, Azure</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EXPERIENCE ================= -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <p class="section__eyebrow">Experience</p>
+          <h2 class="section__title" id="experience-title">Where I've worked</h2>
+
+          <article class="timeline">
+            <div class="timeline__when">
+              <p>Sep 2024 – Present</p>
+              <p class="timeline__where">Bengaluru, India</p>
+            </div>
+            <div class="timeline__what">
+              <h3>Software Developer II <span>· UST Global</span></h3>
+              <ul>
+                <li>
+                  Developed an AI-powered EHDS QA Agent using LangGraph to orchestrate multi-step workflows,
+                  integrating Jira via an MCP server to auto-fetch user stories and Swagger/OpenAPI specs, cutting
+                  manual QA scoping effort by an estimated 30%.
+                </li>
+                <li>
+                  Built an agentic Service Resilience proof-of-concept in Python and LangChain that autonomously
+                  detects and recovers from microservice failures, reducing manual incident-response steps by about
+                  40%.
+                </li>
+                <li>
+                  Migrated critical enterprise applications from AWS to Azure with under 1% downtime, replacing S3
+                  with Azure Blob Storage across microservices while preserving compatibility and performance.
+                </li>
+                <li>
+                  Deployed and scaled Spring Boot microservices for healthcare applications on AKS, improving
+                  resource utilization by roughly 20%.
+                </li>
+                <li>
+                  Supported MongoDB migration from AWS-hosted instances to MongoDB Atlas with validation checks for a
+                  zero-data-loss transition.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS ================= -->
+      <section class="section section--tint" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <p class="section__eyebrow">Core skills</p>
+          <h2 class="section__title" id="skills-title">Tools I reach for</h2>
+
+          <div class="skills">
+            <div class="skill">
+              <h3>AI / Agentic AI</h3>
+              <ul class="tags tags--lg">
+                <li>LangChain</li><li>LangGraph</li><li>RAG</li><li>ChromaDB</li><li>Model Context Protocol</li>
+                <li>Prompt Engineering</li><li>PyTorch</li><li>TensorFlow</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3>Languages</h3>
+              <ul class="tags tags--lg"><li>Python</li><li>Java</li><li>SQL</li><li>TypeScript</li></ul>
+            </div>
+            <div class="skill">
+              <h3>Backend &amp; Frameworks</h3>
+              <ul class="tags tags--lg">
+                <li>Spring Boot</li><li>Hibernate / JPA</li><li>FastAPI</li><li>REST API Design</li><li>Node.js</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3>Databases</h3>
+              <ul class="tags tags--lg"><li>MongoDB</li><li>MongoDB Atlas</li><li>MySQL</li><li>PostgreSQL</li></ul>
+            </div>
+            <div class="skill">
+              <h3>Cloud &amp; DevOps</h3>
+              <ul class="tags tags--lg">
+                <li>Azure Blob Storage</li><li>AKS</li><li>AWS S3 / EC2</li><li>Docker</li><li>Kubernetes</li>
+                <li>Git</li><li>Azure DevOps</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3>Tools &amp; Agile</h3>
+              <ul class="tags tags--lg">
+                <li>Jira</li><li>n8n</li><li>Postman</li><li>Karate</li><li>Swagger / OpenAPI</li><li>Agile / Scrum</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION & RECOGNITION ================= -->
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="container two-col">
+          <div>
+            <p class="section__eyebrow">Education</p>
+            <h2 class="section__title" id="education-title">Background</h2>
+            <article class="edu">
+              <h3>B.Tech, Computer Science and Engineering</h3>
+              <p>Amrita Vishwa Vidyapeetham · Kollam, Kerala</p>
+              <p class="edu__meta">2020 – 2024 · CGPA 8.85</p>
+            </article>
+            <article class="edu">
+              <h3>CBSE Senior Secondary (12th Standard)</h3>
+              <p>Thrissur, Kerala</p>
+              <p class="edu__meta">2020 · 93%</p>
+            </article>
+          </div>
+          <div>
+            <p class="section__eyebrow">Certifications &amp; awards</p>
+            <h2 class="section__title">Recognition</h2>
+            <ul class="list">
+              <li><strong>D3 Coding Challenge Winner</strong> — top 5 of 600+ participants in a multi-round Python and SQL competition.</li>
+              <li>Claude Certified Developer – Foundations (CCDV-F)</li>
+              <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+              <li>Full Stack Java Developer (GSDC)</li>
+              <li>MongoDB SI Associate</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact">
+          <p class="section__eyebrow">Contact</p>
+          <h2 class="section__title" id="contact-title">Let's build something reliable</h2>
+          <p class="section__lead">
+            Open to conversations about agentic AI, backend engineering and cloud platforms.
+          </p>
+          <div class="contact__actions">
+            <a class="button" href="mailto:gouthamrajesh5355@gmail.com">gouthamrajesh5355@gmail.com</a>
+            <a class="button button--ghost" href="https://github.com/Goutham-Rajesh" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <p class="contact__location">Whitefield, Bengaluru, India</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>© <span id="year"></span> Goutham Rajesh</span>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="js/hero.js" defer></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
